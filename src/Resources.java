@@ -46,13 +46,16 @@ public class Resources {
         this.coffee = coffee;
     }
 
+    public double getMoney() {
+        return money;
+    }
 
     public void displayResources() {
         System.out.println("--------------Resources--------------" );
-        System.out.println("Money: " + this.money);
-        System.out.println("Water: " + this.water);
-        System.out.println("Milk: " + this.milk);
-        System.out.println("Coffee: " + this.coffee);
+        System.out.println("Money: " + this.getMoney());
+        System.out.println("Water: " + this.getWater());
+        System.out.println("Milk: " + this.getMilk());
+        System.out.println("Coffee: " + this.getCoffee());
     }
 
     public boolean checkResources() {
@@ -75,8 +78,10 @@ public class Resources {
         if (!checkResources()) {
             System.out.println("Sorry, we are out of service");
         } else {
-            setMoney(this.money - transaction.getMoney());
-            setWater(this.water);
+            setMoney(this.getMoney() - transaction.getMoney());
+            setWater(this.getWater() - actualCoffee.getWaterNeeded());
+            setCoffee(this.getCoffee() - actualCoffee.getCoffeeNeeded());
+            setMilk(this.getMilk() - actualCoffee.getMilkNeeded());
         }
     }
 }
