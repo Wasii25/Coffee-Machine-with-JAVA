@@ -1,57 +1,35 @@
-//This class only takes care of the resources
 public class Resources {
-    private int water = 300;
-    private int milk = 200;
-    private int coffee = 100;
-    private double money = 0.0;
-
-
-    //Constructor
+    private int water;
+    private int milk;
+    private int coffee;
+    private double money;
 
     public Resources(int water, int milk, int coffee) {
         this.water = water;
         this.milk = milk;
         this.coffee = coffee;
+        this.money = 0.0;
     }
 
-    //GETTERS AND SETTERS
-    public int getWater() {
-        return water;
+    public void updateResources(int waterDelta, int milkDelta, int coffeeDelta, double moneyDelta) {
+        water += waterDelta;
+        milk += milkDelta;
+        coffee += coffeeDelta;
+        money += moneyDelta;
     }
 
-    public int getMilk() {
-        return milk;
-    }
-
-    public int getCoffee() {
-        return coffee;
-    }
-
-    public double getMoney() {
-        return money;
-    }
-
-    public void setWater(int water) {
-        this.water = water;
-    }
-
-    public void setMilk(int milk) {
-        this.milk = milk;
-    }
-
-    public void setCoffee(int coffee) {
-        this.coffee = coffee;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
+    // Getters
+    public int getWater() { return water; }
+    public int getMilk() { return milk; }
+    public int getCoffee() { return coffee; }
+    public double getMoney() { return money; }
 
     public void displayResources() {
-        System.out.println("--------------Resources--------------" );
-        System.out.println("Money: " + this.getMoney());
-        System.out.println("Water: " + this.getWater());
-        System.out.println("Milk: " + this.getMilk());
-        System.out.println("Coffee: " + this.getCoffee());
+        System.out.println("\n--------------Resources--------------");
+        System.out.printf("Money: $%.2f%n", money);
+        System.out.printf("Water: %dml%n", water);
+        System.out.printf("Milk: %dml%n", milk);
+        System.out.printf("Coffee: %dg%n", coffee);
+        System.out.println("------------------------------------");
     }
 }
