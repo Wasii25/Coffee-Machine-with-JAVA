@@ -29,11 +29,11 @@ public class Main {
 
                     Transactions transaction = new Transactions(espresso, resources);
 
-
-                    transaction.transaction(sc);
-                    transaction.makeCoffee();
-
-                    System.out.println("Here is your " + espresso.getName() +" ☕");
+                    if(transaction.checkResources()) {
+                        transaction.transaction(sc);
+                        transaction.makeCoffee();
+                        System.out.println("Here is your " + espresso.getName() + " ☕");
+                    }
                     break;
 
                 case 2:
@@ -41,11 +41,11 @@ public class Main {
 
                     Transactions transaction2 = new Transactions(latte, resources);
 
-
-                    transaction2.transaction(sc);
-                    transaction2.makeCoffee();
-
-                    System.out.println("Here is your " + latte.getName() +" ☕");
+                    if(transaction2.checkResources()) {
+                        transaction2.transaction(sc);
+                        transaction2.makeCoffee();
+                        System.out.println("Here is your " + latte.getName() + " ☕");
+                    }
                     break;
 
 
@@ -54,11 +54,11 @@ public class Main {
 
                     Transactions transaction3 = new Transactions(cappuccino, resources);
 
-
-                    transaction3.transaction(sc);
-                    transaction3.makeCoffee();
-
-                    System.out.println("Here is your " + cappuccino.getName() +" ☕");
+                    if(transaction3.checkResources()) {
+                        transaction3.transaction(sc);
+                        transaction3.makeCoffee();
+                        System.out.println("Here is your " + cappuccino.getName() + " ☕");
+                    }
                     break;
 
                 case 5:
