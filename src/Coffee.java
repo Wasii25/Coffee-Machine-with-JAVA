@@ -14,44 +14,25 @@ public class Coffee {
         this.moneyNeeded = moneyNeeded;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getMoneyNeeded() {
         return moneyNeeded;
-    }
-
-    public void setMoneyNeeded(double moneyNeeded) {
-        this.moneyNeeded = moneyNeeded;
     }
 
     public int getCoffeeNeeded() {
         return coffeeNeeded;
     }
 
-    public void setCoffeeNeeded(int coffeeNeeded) {
-        this.coffeeNeeded = coffeeNeeded;
-    }
 
     public int getMilkNeeded() {
         return milkNeeded;
-    }
-
-    public void setMilkNeeded(int milkNeeded) {
-        this.milkNeeded = milkNeeded;
     }
 
     public int getWaterNeeded() {
         return waterNeeded;
     }
 
-    public void setWaterNeeded(int waterNeeded) {
-        this.waterNeeded = waterNeeded;
+    public String getName() {
+        return name;
     }
 }
 
